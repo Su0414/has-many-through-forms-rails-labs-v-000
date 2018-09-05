@@ -16,7 +16,7 @@
 <% end %>
 
 
-<%= form_for @comment do |f|%>
+<%= form_tag @comment do |f|%>
 
 <%= f.label :comment%>
 <%= f.text_field :comment_content%>
@@ -24,4 +24,10 @@
 <%= f.submit "Create Comment"%>
 
 <% end %>
-  
+
+
+<%= form_tag do %>
+    <%= label_tag(:comment_content, "Comment for:") %>
+    <%= text_field_tag(:comment_content) %>
+    <%= submit_tag("Create Comment") %>
+<% end %>  
