@@ -16,8 +16,8 @@
 <% end %>
 
 
-<% form_for @comment do |f|%>
+<%= form_for @comment do |f|%>
 
-  collection_select(:post, :user_id, User.all, :id, username, include_blank: true)
+  <%=collection_select(:post, :user_id, User.all, :id, username, include_blank: true)%>
 
-<% f.submit "Create Comment"%>
+<%= f.submit "Create Comment"%>
