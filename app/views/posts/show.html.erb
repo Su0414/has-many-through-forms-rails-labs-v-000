@@ -14,3 +14,10 @@
 <% @post.distinct_users.each do |user| %>
 <%= link_to user.username , user_path(user)%>
 <% end %>
+
+
+<% form_for @comment do |f|%>
+
+  collection_select(:post, :user_id, User.all, :id, username, prompt: true)
+
+<% f.submit "Create Comment"%>
