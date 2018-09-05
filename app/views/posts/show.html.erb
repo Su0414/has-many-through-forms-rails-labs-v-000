@@ -15,7 +15,7 @@
 <%= link_to user.username , user_path(user)%>
 <% end %>
 
-<%= form_tag (comments_path, method: "post") do %>
+<%= form_tag (comments_path) do %>
 
     <%= label_tag(:content, "Comment for:") %>
     <%= text_field_tag(:content) %>
