@@ -15,9 +15,11 @@
 <%= link_to user.username , user_path(user)%>
 <% end %>
 
-
 <%= form_tag do %>
-    <%= label_tag(:comment_content, "Comment for:") %>
-    <%= text_field_tag(:comment_content) %>
+
+    <%= label_tag(:content, "Comment for:") %>
+    <%= text_field_tag(:content) %>
+        
+    
     <%= submit_tag("Create Comment") %>
 <% end %>
