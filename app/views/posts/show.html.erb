@@ -20,8 +20,7 @@
     <%= label_tag(:content, "Comment for:") %>
     <%= text_field_tag(:content) %>
 
-    <% users_array = @post.distinct_users { |u| [u.username] } %>
-    <%=  options_for_select(users_array) %>
+    
 
     <%= submit_tag("Create Comment") %>
 <% end %>
